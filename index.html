@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doce Fábrica 🍰</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <span class="icone-marca">🍰</span>
+      <div>
+        <h1>Doce Fábrica</h1>
+        <p>Sua confeitaria dos sonhos!</p>
+      </div>
+    </div>
+
+    <div class="indicadores">
+      <div class="indicador">
+        <span>⭐ Pontos</span>
+        <strong id="pontos">0</strong>
+      </div>
+      <div class="indicador">
+        <span>⏱️ Tempo</span>
+        <strong id="tempo">90</strong>
+      </div>
+      <div class="indicador">
+        <span>🎂 Fase</span>
+        <strong id="fase">1</strong>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="area-jogo">
+      <div class="titulo-cena">
+        <div>
+          <h2>Minha confeitaria</h2>
+          <p>Prepare os bolos pedidos pelos clientes!</p>
+        </div>
+        <span class="status" id="status">Fábrica aberta</span>
+      </div>
+
+      <div id="cena" aria-label="Confeitaria 3D"></div>
+
+      <div class="dica">
+        🖱️ Arraste para girar a câmera e use a rodinha para aproximar.
+      </div>
+    </section>
+
+    <aside class="painel">
+      <section class="cartao pedido">
+        <h2>📋 Pedido do cliente</h2>
+        <p class="descricao">Prepare um bolo igual ao modelo abaixo.</p>
+
+        <div id="modelo-pedido" class="modelo-pedido">
+          <span>🎂</span>
+        </div>
+
+        <div class="detalhes-pedido">
+          <p><span>Massa</span><strong id="pedido-massa">Chocolate</strong></p>
+          <p><span>Cobertura</span><strong id="pedido-cobertura">Rosa</strong></p>
+          <p><span>Decoração</span><strong id="pedido-decoracao">Morango</strong></p>
+        </div>
+      </section>
+
+      <section class="cartao controles">
+        <h2>🧁 Monte seu bolo</h2>
+
+        <div class="grupo-opcoes">
+          <h3>1. Escolha a massa</h3>
+          <div class="opcoes" id="opcoes-massa">
+            <button class="opcao selecionada" data-tipo="massa" data-valor="Chocolate">
+              🍫 Chocolate
+            </button>
+            <button class="opcao" data-tipo="massa" data-valor="Baunilha">
+              🍦 Baunilha
+            </button>
+            <button class="opcao" data-tipo="massa" data-valor="Morango">
+              🍓 Morango
+            </button>
+          </div>
+        </div>
+
+        <div class="grupo-opcoes">
+          <h3>2. Escolha a cobertura</h3>
+          <div class="opcoes" id="opcoes-cobertura">
+            <button class="opcao selecionada" data-tipo="cobertura" data-valor="Rosa">
+              🩷 Rosa
+            </button>
+            <button class="opcao" data-tipo="cobertura" data-valor="Chocolate">
+              🍫 Chocolate
+            </button>
+            <button class="opcao" data-tipo="cobertura" data-valor="Branca">
+              🤍 Branca
+            </button>
+          </div>
+        </div>
+
+        <div class="grupo-opcoes">
+          <h3>3. Escolha a decoração</h3>
+          <div class="opcoes" id="opcoes-decoracao">
+            <button class="opcao selecionada" data-tipo="decoracao" data-valor="Morango">
+              🍓 Morango
+            </button>
+            <button class="opcao" data-tipo="decoracao" data-valor="Confete">
+              🌈 Confete
+            </button>
+            <button class="opcao" data-tipo="decoracao" data-valor="Chocolate">
+              🍫 Chocolate
+            </button>
+          </div>
+        </div>
+
+        <button id="finalizar" class="botao-principal">
+          Entregar bolo ✨
+        </button>
+
+        <p id="mensagem" class="mensagem">Vamos preparar seu primeiro bolo!</p>
+      </section>
+    </aside>
+  </main>
+
+  <div id="modal-fim" class="modal escondido">
+    <div class="modal-conteudo">
+      <span class="modal-emoji">🎂</span>
+      <h2>Expediente encerrado!</h2>
+      <p id="resultado-final">Você fez muitos bolos!</p>
+      <button id="reiniciar" class="botao-principal">Jogar novamente</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

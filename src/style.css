@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Fredoka', sans-serif;
+  color: #59354f;
+  background: #fff4fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --rosa: #f08bbd;
+  --rosa-escuro: #c84c91;
+  --lilas: #b9a1ec;
+  --branco: #ffffff;
+  --texto: #59354f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, #ffe0ef 0, transparent 30%),
+    radial-gradient(circle at 90% 80%, #e9e1ff 0, transparent 30%),
+    #fff7fb;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #9c6bd1;
+  outline-offset: 3px;
+}
+
+.topo {
+  min-height: 100px;
+  padding: 18px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: #ffffffd9;
+  border-bottom: 2px solid #f8d9e9;
+  box-shadow: 0 5px 20px #9a4d7610;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.icone-marca {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: #ffe3f0;
+  font-size: 35px;
+  box-shadow: 0 5px 0 #f4bfd8;
+}
+
+.marca h1 {
+  margin: 0;
+  color: #c84c91;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.marca p {
+  margin: 3px 0 0;
+  color: #9a7390;
+  font-size: 14px;
+}
+
+.indicadores {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.indicador {
+  min-width: 95px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff1f8;
+  border: 1px solid #f5d5e7;
+  border-radius: 16px;
+}
+
+.indicador span {
+  color: #99758d;
+  font-size: 12px;
+}
+
+.indicador strong {
+  color: #b84486;
+  font-size: 23px;
+}
+
+.layout {
+  width: min(1500px, 96%);
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.85fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.area-jogo,
+.cartao {
+  overflow: hidden;
+  background: #ffffffed;
+  border: 1px solid #f2d8e8;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px #8c456a0d;
+}
+
+.titulo-cena {
+  padding: 20px 22px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.titulo-cena h2,
+.cartao h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.titulo-cena p {
+  margin: 5px 0 0;
+  color: #a1849b;
+  font-size: 13px;
+}
+
+.status {
+  padding: 8px 12px;
+  color: #428e69;
+  background: #e7faee;
+  border-radius: 30px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#cena {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  background: linear-gradient(#d9edff 0%, #f8e7f7 58%, #f8d6e9 100%);
+}
+
+#cena canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+#cena canvas:active {
+  cursor: grabbing;
+}
+
+.dica {
+  padding: 13px 20px;
+  color: #9b7a92;
+  background: #fff8fc;
+  font-size: 12px;
+  text-align: center;
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cartao {
+  padding: 22px;
+}
+
+.descricao {
+  margin: 7px 0 16px;
+  color: #a1849b;
+  font-size: 13px;
+}
+
+.modelo-pedido {
+  min-height: 115px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #fff0f8, #f0eaff);
+  border: 1px dashed #e7b7d4;
+  border-radius: 18px;
+  font-size: 58px;
+}
+
+.detalhes-pedido {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detalhes-pedido p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.detalhes-pedido span {
+  color: #a1849b;
+}
+
+.detalhes-pedido strong {
+  text-align: right;
+}
+
+.grupo-opcoes {
+  margin-top: 20px;
+}
+
+.grupo-opcoes h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.opcao {
+  flex: 1 1 90px;
+  min-height: 42px;
+  padding: 9px 10px;
+  color: #77536d;
+  background: #fff7fb;
+  border: 1px solid #f0d6e6;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.opcao:hover {
+  transform: translateY(-2px);
+  border-color: #e69bc4;
+}
+
+.opcao.selecionada {
+  color: #a72d70;
+  background: #ffe2f0;
+  border: 2px solid #e878b2;
+  font-weight: 600;
+}
+
+.botao-principal {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 23px;
+  padding: 13px 18px;
+  color: white;
+  background: linear-gradient(135deg, #ed83b8, #c56ce0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 0 #b657a0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.botao-principal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 #b657a0;
+}
+
+.botao-principal:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #b657a0;
+}
+
+.botao-principal:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.mensagem {
+  min-height: 38px;
+  margin: 17px 0 0;
+  color: #a36a91;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.mensagem.sucesso {
+  color: #32885d;
+}
+
+.mensagem.erro {
+  color: #c54f67;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background: #44213b99;
+}
+
+.modal.escondido {
+  display: none;
+}
+
+.modal-conteudo {
+  width: min(420px, 100%);
+  padding: 35px;
+  background: white;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 20px 70px #35112c44;
+}
+
+.modal-emoji {
+  font-size: 65px;
+}
+
+.modal-conteudo h2 {
+  margin: 15px 0 10px;
+  color: #c84c91;
+}
+
+.modal-conteudo p {
+  color: #99758d;
+  line-height: 1.6;
+}
+
+@media (max-width: 950px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  #cena {
+    height: 460px;
+  }
+
+  .painel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .topo {
+    padding: 16px;
+  }
+
+  .marca h1 {
+    font-size: 24px;
+  }
+
+  .indicadores {
+    width: 100%;
+  }
+
+  .indicador {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+  }
+
+  .layout {
+    width: 94%;
+    margin: 15px auto;
+  }
+
+  .painel {
+    display: flex;
+  }
+
+  #cena {
+    height: 360px;
+  }
+
+  .titulo-cena {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cartao {
+    padding: 18px;
+  }
+}
